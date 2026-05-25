@@ -1,0 +1,225 @@
+/* Variables de color basadas en la marca de FarmaVital */
+:root {
+    --azul-principal: #0a2540;
+    --azul-marca: #003399;
+    --rojo-marca: #e60000;
+    --blanco: #ffffff;
+    --gris-fondo: #f4f6f9;
+    --texto-oscuro: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    color: var(--texto-oscuro);
+}
+
+/* Banner de la Demo (Periodo de prueba) */
+.demo-banner {
+    background-color: #ff9800;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Header / Logotipo */
+header {
+    background: var(--blanco);
+    text-align: center;
+    padding: 25px 20px;
+    border-bottom: 4px solid var(--azul-marca);
+}
+
+.logo {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo .farma { color: var(--azul-marca); }
+.logo .vital { color: var(--rojo-marca); }
+
+.slogan {
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+    font-size: 1.1rem;
+}
+
+/* Sección Principal (Hero) */
+.hero {
+    background: linear-gradient(135deg, rgba(0,51,153,0.95) 0%, rgba(10,37,64,0.9) 100%);
+    color: var(--blanco);
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.delivery-badge {
+    display: inline-block;
+    background: var(--rojo-marca);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(230, 0, 0, 0.4);
+    animation: pulse 2s infinite;
+}
+
+/* Sección de Sucursales */
+.sucursales {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.sucursales h2 {
+    font-size: 2.4rem;
+    color: var(--azul-principal);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.grid-sucursales {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--blanco);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    width: 340px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-top: 6px solid var(--azul-marca);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    font-size: 3.5rem;
+    color: var(--azul-marca);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--azul-principal);
+}
+
+.direccion {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    min-height: 70px;
+}
+
+.btn-maps {
+    display: inline-block;
+    background: var(--azul-marca);
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 51, 153, 0.2);
+}
+
+.btn-maps:hover {
+    background: #002266;
+    transform: scale(1.02);
+}
+
+/* Botones Flotantes de Redes Sociales */
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+
+.btn-floating {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.btn-floating:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.1);
+}
+
+.btn-floating.whatsapp { background-color: #25D366; }
+.btn-floating.facebook { background-color: #1877F2; }
+
+/* Pie de página */
+footer {
+    background: var(--azul-principal);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 0.95rem;
+}
+
+/* Animación del botón de Delivery */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(230, 0, 0, 0.4); }
+    50% { transform: scale(1.04); box-shadow: 0 6px 22px rgba(230, 0, 0, 0.6); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(230, 0, 0, 0.4); }
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.1rem; }
+    .card { width: 100%; }
+}
