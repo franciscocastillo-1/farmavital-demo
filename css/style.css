@@ -244,14 +244,11 @@ footer {
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 20px auto 0 auto;
     font-size: 0.85rem;
     color: #b3c3d4;
+    text-align: center; 
 }
 
 .footer-link {
