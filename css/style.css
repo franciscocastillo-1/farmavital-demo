@@ -257,18 +257,17 @@ footer {
 .footer-link {
     color: #ffffff;
     text-decoration: underline;
+    margin-right: 5px;
 }
 
 .footer-link:hover {
     color: #3b82f6;
 }
 @media (max-width: 768px) {
-    /* Lo que ya tenías de tu página */
     .hero h1 { font-size: 2.2rem; }
     .hero p { font-size: 1.1rem; }
     .card { width: 100%; }
 
-    /* Lo nuevo para adaptar el footer */
     .footer-container {
         flex-direction: column;
     }
